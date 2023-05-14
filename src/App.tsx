@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+// Components
+import RequireGuest from './components/RequireGuest';
+import RequireAuth from './components/RequireAuth';
+
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -19,12 +23,16 @@ const App = () => {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
 
-          <Route path='login' element={<Login />} />
-          <Route path='signup' element={<Signup />} />
+          <Route element={<RequireGuest />}>
+            <Route path='login' element={<Login />} />
+            <Route path='signup' element={<Signup />} />
+          </Route>
 
-          <Route path='create' element={<CreateEmployee />} />
-          <Route path='employee/:id' element={<EmployeeDetails />} />
-          <Route path='update/:id' element={<UpdateEmployee />} />
+          <Route element={<RequireAuth />}>
+            <Route path='create' element={<CreateEmployee />} />
+            <Route path='employee/:id' element={<EmployeeDetails />} />
+            <Route path='update/:id' element={<UpdateEmployee />} />
+          </Route>
 
           <Route path='404' element={<NotFound />} />
           <Route path='*' element={<Navigate to='404' replace />} />
