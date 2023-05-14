@@ -2,7 +2,23 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        error: {
+          100: '#fd8080',
+          200: '#5c0000',
+          300: '#290000',
+        },
+        table: {
+          100: '#36304a',
+        },
+      },
+      fontFamily: {
+        kgcs: ['kgcs'],
+        lexreg: ['lexreg'],
+        lexbold: ['lexbold'],
+      },
+    },
   },
   plugins: [],
 };
