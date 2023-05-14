@@ -42,7 +42,7 @@ export type EmployeeStateType = {
   isLoading: boolean;
 };
 
-export type PostContextType = {
+export type EmployeeContextType = {
   employees: EmployeeType[];
   isLoading: boolean;
   dispatch: React.Dispatch<EmployeeReducerAction>;
