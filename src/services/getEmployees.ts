@@ -8,9 +8,12 @@ export const getEmployees = async (
     credentials: 'include',
   });
 
-  const json = await response.json();
+  if (!response.ok) {
+    dispatch({ type: 'SET', payload: [] });
+  }
 
   if (response.ok) {
+    const json = await response.json();
     dispatch({ type: 'SET', payload: json });
   }
 };
