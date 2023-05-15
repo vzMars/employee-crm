@@ -20,8 +20,8 @@ const MobileNav = ({ user, open, setOpen, logout }: PropsType) => {
     >
       {user ? (
         <>
-          <Link to='/create' className='rounded-md p-2'>
-            Create Employee
+          <Link to='/add' className='rounded-md p-2'>
+            Add Employee
           </Link>
           <button onClick={() => logout()} className='rounded-md p-2 text-left'>
             Logout

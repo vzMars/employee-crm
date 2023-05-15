@@ -11,7 +11,7 @@ const Nav = ({ user, logout }: PropsType) => {
     <nav className='hidden h-12 items-center space-x-6 font-lexbold text-lg lg:flex'>
       {user ? (
         <>
-          <Link to='/create'>Create Employee</Link>
+          <Link to='/add'>Add Employee</Link>
           <button
             onClick={() => logout()}
             className='rounded-md bg-table-100 px-2.5 py-2'

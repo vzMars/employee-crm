@@ -8,7 +8,7 @@ import RequireAuth from './components/RequireAuth';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import CreateEmployee from './pages/CreateEmployee';
+import AddEmployee from './pages/AddEmployee';
 import EmployeeDetails from './pages/EmployeeDetails';
 import UpdateEmployee from './pages/UpdateEmployee';
 import NotFound from './pages/NotFound';
@@ -28,7 +28,7 @@ const App = () => {
 
           <Route element={<RequireAuth />}>
             <Route index element={<Home />} />
-            <Route path='create' element={<CreateEmployee />} />
+            <Route path='add' element={<AddEmployee />} />
             <Route path='employee/:id' element={<EmployeeDetails />} />
             <Route path='update/:id' element={<UpdateEmployee />} />
           </Route>
