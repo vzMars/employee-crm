@@ -21,14 +21,13 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-
           <Route element={<RequireGuest />}>
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
           </Route>
 
           <Route element={<RequireAuth />}>
+            <Route index element={<Home />} />
             <Route path='create' element={<CreateEmployee />} />
             <Route path='employee/:id' element={<EmployeeDetails />} />
             <Route path='update/:id' element={<UpdateEmployee />} />

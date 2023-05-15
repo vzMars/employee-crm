@@ -1,7 +1,14 @@
+import { useEmployeeContext } from '../hooks/useEmployeeContext';
+import EmployeeTable from '../components/EmployeeTable';
+
 const Home = () => {
+  const { employees } = useEmployeeContext();
+
   return (
-    <main>
-      <h1>Home</h1>
+    <main className='font-lexreg'>
+      <section className='mx-auto max-w-6xl px-4 pt-16'>
+        <EmployeeTable employees={employees} />
+      </section>
     </main>
   );
 };
