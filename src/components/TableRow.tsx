@@ -7,7 +7,7 @@ type PropsType = {
 
 const TableRow = ({ employee, index }: PropsType) => {
   return (
-    <tr className={index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-200'}>
+    <tr className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-200'}`}>
       <td className='p-4'>{employee.name}</td>
       <td className='p-4'>{employee.address}</td>
       <td className='p-4'>{employee.city}</td>
