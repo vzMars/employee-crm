@@ -27,25 +27,25 @@ const Signup = () => {
             type='email'
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            className='mb-6 rounded-md p-2 border border-table-100'
+            className='mb-6 rounded-md border border-table-100 p-2'
           />
           <label className='mb-1'>Username</label>
           <input
             type='text'
             onChange={(e) => setUserName(e.target.value)}
             value={username}
-            className='mb-6 rounded-md p-2 border border-table-100'
+            className='mb-6 rounded-md border border-table-100 p-2'
           />
           <label className='mb-1'>Password</label>
           <input
             type='password'
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-            className='mb-7 rounded-md p-2 border border-table-100'
+            className='mb-7 rounded-md border border-table-100 p-2'
           />
           <button
             disabled={isLoading}
-            className='mb-6 w-full rounded-md bg-table-100 text-gray-50 px-2.5 py-2 font-lexbold'
+            className='mb-6 w-full rounded-md bg-table-100 px-2.5 py-2 font-lexbold text-gray-50'
           >
             Sign Up
           </button>

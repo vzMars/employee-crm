@@ -16,7 +16,7 @@ const Header = () => {
       <section className='mx-auto flex max-w-6xl items-center justify-between p-4'>
         <Link
           to='/'
-          className='text-3xl font-lexbold'
+          className='font-lexbold text-3xl'
           onClick={() => setOpen(false)}
         >
           Employee CRM

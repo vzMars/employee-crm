@@ -15,7 +15,7 @@ const MobileNav = ({ user, open, setOpen, logout }: PropsType) => {
         !open
           ? 'hidden'
           : 'absolute left-0 right-0 z-10 mx-2.5 flex flex-col gap-5 rounded-md bg-table-100 p-2'
-      } sm:left-auto sm:w-64 lg:hidden font-lexbold`}
+      } font-lexbold sm:left-auto sm:w-64 lg:hidden`}
       onClick={() => setOpen(false)}
     >
       {user ? (
