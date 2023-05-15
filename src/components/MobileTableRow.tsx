@@ -1,4 +1,5 @@
 import { EmployeeType } from '../types';
+import { Link } from 'react-router-dom';
 
 type PropsType = {
   employee: EmployeeType;
@@ -11,7 +12,12 @@ const MobileTableRow = ({ employee, index }: PropsType) => {
       <td
         className={`relative block p-4 pl-[50%] before:absolute before:left-0 before:top-0 before:w-2/5 before:whitespace-nowrap before:p-4 before:content-['Name']`}
       >
-        {employee.name}
+        <Link
+          to={`employee/${employee.id}`}
+          className='font-semibold text-table-200'
+        >
+          {employee.name}
+        </Link>
       </td>
       <td
         className={`relative block p-4 pl-[50%] before:absolute before:left-0 before:top-0 before:w-2/5 before:whitespace-nowrap before:p-4 before:content-['Address']`}
