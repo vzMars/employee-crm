@@ -11,6 +11,7 @@ export default {
         },
         table: {
           100: '#36304a',
+          200: '#5057ce',
         },
       },
       fontFamily: {
