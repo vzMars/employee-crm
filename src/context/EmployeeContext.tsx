@@ -43,7 +43,7 @@ export const employeeReducer = (
       }
 
       return {
-        employees: [action.payload, ...state.employees],
+        employees: [...state.employees, action.payload],
         isLoading: false,
       };
     case 'UPDATE':
