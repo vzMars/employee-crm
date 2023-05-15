@@ -10,7 +10,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AddEmployee from './pages/AddEmployee';
 import EmployeeDetails from './pages/EmployeeDetails';
-import UpdateEmployee from './pages/UpdateEmployee';
 import NotFound from './pages/NotFound';
 
 // Layout
@@ -30,7 +29,6 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='add' element={<AddEmployee />} />
             <Route path='employee/:id' element={<EmployeeDetails />} />
-            <Route path='update/:id' element={<UpdateEmployee />} />
           </Route>
 
           <Route path='404' element={<NotFound />} />

@@ -25,6 +25,23 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
     }
   };
 
+  const updateStatus = async (id: string) => {
+    const response = await fetch(`http://localhost:8080/api/employees/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    });
+
+    const json = await response.json();
+
+    if (response.ok) {
+      dispatch({ type: 'UPDATE', payload: json });
+      navigate('/');
+    }
+  };
+
   return (
     <div className='mx-auto max-w-3xl'>
       <div className='mb-4 overflow-hidden rounded-md border border-table-100 bg-gray-50 text-table-100'>
@@ -39,20 +56,17 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
         <p className='my-2 p-2'>Status: {employee.status}</p>
       </div>
       <div className='flex space-x-2'>
-        <Link
-          to='/'
-          className='rounded-md bg-table-100 px-1.5 py-2 text-center'
-        >
+        <Link to='/' className='rounded-md bg-table-100 p-2 text-center'>
           Back
         </Link>
-        {/* <Link
-          to='/'
-          className='rounded-md bg-table-100 px-1.5 py-2 text-center'
-        >
-          Update Employee
-        </Link> */}
         <button
-          className='rounded-md bg-table-100 px-1.5 py-2 text-center'
+          className='rounded-md bg-table-100 p-2 text-center'
+          onClick={() => updateStatus(employee.id)}
+        >
+          Update Status
+        </button>
+        <button
+          className='rounded-md bg-table-100 p-2 text-center'
           onClick={() => deleteEmployee(employee.id)}
         >
           Delete
