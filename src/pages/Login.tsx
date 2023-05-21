@@ -39,7 +39,7 @@ const Login = () => {
             disabled={isLoading}
             className='mb-6 w-full rounded-md bg-table-100 px-2.5 py-2 font-lexbold text-gray-50'
           >
-            Sign Up
+            Login
           </button>
           {error && <Error errorMessage={error} />}
         </form>
