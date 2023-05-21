@@ -15,7 +15,7 @@ const EmployeeDetails = () => {
       setIsLoading(true);
 
       const response = await fetch(
-        `http://localhost:8080/api/employees/${id}`,
+        `https://api.employeecrm.vzmars.com/api/employees/${id}`,
         {
           method: 'GET',
           headers: {

@@ -11,13 +11,16 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
   const navigate = useNavigate();
 
   const deleteEmployee = async (id: string) => {
-    const response = await fetch(`http://localhost:8080/api/employees/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-    });
+    const response = await fetch(
+      `https://api.employeecrm.vzmars.com/api/employees/${id}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      }
+    );
 
     if (response.ok) {
       dispatch({ type: 'DELETE', payload: id });
@@ -26,13 +29,16 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
   };
 
   const updateStatus = async (id: string) => {
-    const response = await fetch(`http://localhost:8080/api/employees/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-    });
+    const response = await fetch(
+      `https://api.employeecrm.vzmars.com/api/employees/${id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      }
+    );
 
     const json = await response.json();
 

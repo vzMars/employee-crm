@@ -21,22 +21,25 @@ const AddEmployee = () => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('http://localhost:8080/api/employees', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-      body: JSON.stringify({
-        name,
-        address,
-        city,
-        state,
-        zipcode,
-        jobTitle,
-        status,
-      }),
-    });
+    const response = await fetch(
+      'https://api.employeecrm.vzmars.com/api/employees',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({
+          name,
+          address,
+          city,
+          state,
+          zipcode,
+          jobTitle,
+          status,
+        }),
+      }
+    );
 
     const json = await response.json();
 

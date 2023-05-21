@@ -49,10 +49,13 @@ export const AuthProvider = ({ children }: ChildrenType): ReactElement => {
 
   useEffect(() => {
     const getAuthStatus = async () => {
-      const response = await fetch('http://localhost:8080/api/auth', {
-        method: 'GET',
-        credentials: 'include',
-      });
+      const response = await fetch(
+        'https://api.employeecrm.vzmars.com/api/auth',
+        {
+          method: 'GET',
+          credentials: 'include',
+        }
+      );
 
       const json = await response.json();
 
