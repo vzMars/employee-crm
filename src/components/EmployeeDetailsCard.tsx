@@ -12,7 +12,7 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
 
   const deleteEmployee = async (id: string) => {
     const response = await fetch(
-      `https://api.employeecrm.vzmars.com/api/employees/${id}`,
+      `https://api.employeemanager.vzmars.com/api/employees/${id}`,
       {
         method: 'DELETE',
         headers: {
@@ -30,7 +30,7 @@ const EmployeeDetailsCard = ({ employee }: PropsType) => {
 
   const updateStatus = async (id: string) => {
     const response = await fetch(
-      `https://api.employeecrm.vzmars.com/api/employees/${id}`,
+      `https://api.employeemanager.vzmars.com/api/employees/${id}`,
       {
         method: 'PUT',
         headers: {

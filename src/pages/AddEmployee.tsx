@@ -22,7 +22,7 @@ const AddEmployee = () => {
     setError(null);
 
     const response = await fetch(
-      'https://api.employeecrm.vzmars.com/api/employees',
+      'https://api.employeemanager.vzmars.com/api/employees',
       {
         method: 'POST',
         headers: {

@@ -7,7 +7,7 @@ export const useLogout = () => {
 
   const logout = async () => {
     const response = await fetch(
-      'https://api.employeecrm.vzmars.com/api/auth/logout',
+      'https://api.employeemanager.vzmars.com/api/auth/logout',
       {
         method: 'GET',
         credentials: 'include',

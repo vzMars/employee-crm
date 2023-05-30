@@ -14,7 +14,7 @@ export const useSignup = () => {
     setError(null);
 
     const response = await fetch(
-      'https://api.employeecrm.vzmars.com/api/auth/signup',
+      'https://api.employeemanager.vzmars.com/api/auth/signup',
       {
         method: 'POST',
         headers: {

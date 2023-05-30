@@ -19,7 +19,7 @@ const Header = () => {
           className='font-lexbold text-3xl'
           onClick={() => setOpen(false)}
         >
-          Employee CRM
+          Employee Manager
         </Link>
         <div className='lg:hidden'>
           <Hamburger toggled={open} toggle={setOpen} rounded size={32} />

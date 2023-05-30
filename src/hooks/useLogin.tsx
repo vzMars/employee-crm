@@ -14,7 +14,7 @@ export const useLogin = () => {
     setError(null);
 
     const response = await fetch(
-      'https://api.employeecrm.vzmars.com/api/auth/login',
+      'https://api.employeemanager.vzmars.com/api/auth/login',
       {
         method: 'POST',
         headers: {

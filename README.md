@@ -1,10 +1,10 @@
-# Employee CRM
+# Employee Manager
 
-The front-end for a full-stack crm application that allows companies to keep track of their employees.
+The front-end for a full-stack employee manager application that allows companies to keep track of their employees.
 
-**Link to project:** https://employeecrm.vzmars.com/
+**Link to project:** https://employeemanager.vzmars.com/
 
-**Back-End:** https://github.com/vzMars/employee-crm-api
+**Back-End:** https://github.com/vzMars/employee-manager-api
 
 ![alt text](https://i.imgur.com/fgPhylk.png)
 

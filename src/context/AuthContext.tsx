@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }: ChildrenType): ReactElement => {
   useEffect(() => {
     const getAuthStatus = async () => {
       const response = await fetch(
-        'https://api.employeecrm.vzmars.com/api/auth',
+        'https://api.employeemanager.vzmars.com/api/auth',
         {
           method: 'GET',
           credentials: 'include',

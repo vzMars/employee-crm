@@ -4,7 +4,7 @@ export const getEmployees = async (
   dispatch: React.Dispatch<EmployeeReducerAction>
 ) => {
   const response = await fetch(
-    'https://api.employeecrm.vzmars.com/api/employees',
+    'https://api.employeemanager.vzmars.com/api/employees',
     {
       method: 'GET',
       credentials: 'include',
