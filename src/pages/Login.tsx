@@ -26,7 +26,7 @@ const Login = () => {
           className='mx-auto flex max-w-sm flex-col rounded-md border border-table-100 bg-gray-50 p-4 py-12'
           onSubmit={handleSubmit}
         >
-          <div onClick={handleGuestLogin} className='rounded-md bg-table-100 px-2.5 py-2 font-lexbold text-gray-50 self-center cursor-pointer'>
+          <div onClick={handleGuestLogin} className='rounded-md bg-table-100 px-2.5 py-2 font-lexbold text-gray-50 self-end cursor-pointer'>
             Guest Login
           </div>
           <h1 className='mb-6 font-lexbold text-4xl'>Login</h1>
