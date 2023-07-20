@@ -13,6 +13,12 @@ const Login = () => {
     await login(username, password);
   };
 
+  const handleGuestLogin = async (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+
+    await login("rambobarbershop", "Mike123!");
+  };
+
   return (
     <main className='font-lexreg text-table-100'>
       <section className='mx-auto max-w-6xl px-4 pt-16 md:pt-40'>
@@ -20,6 +26,9 @@ const Login = () => {
           className='mx-auto flex max-w-sm flex-col rounded-md border border-table-100 bg-gray-50 p-4 py-12'
           onSubmit={handleSubmit}
         >
+          <div onClick={handleGuestLogin} className='rounded-md bg-table-100 px-2.5 py-2 font-lexbold text-gray-50 self-center cursor-pointer'>
+            Guest Login
+          </div>
           <h1 className='mb-6 font-lexbold text-4xl'>Login</h1>
           <label className='mb-1'>Username</label>
           <input
