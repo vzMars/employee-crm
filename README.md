@@ -2,7 +2,7 @@
 
 The front-end for a full-stack employee manager application that allows companies to keep track of their employees.
 
-**Link to project:** https://employeemanager.vzmars.com/
+**Link to project:** N/A
 
 **Back-End:** https://github.com/vzMars/employee-manager-api
 
